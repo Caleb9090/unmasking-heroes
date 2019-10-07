@@ -7,7 +7,7 @@ function hideSecretIdentity() {
 }
 
 function createHeroBlock(hero) {
-  var heroBlock = document.createElement('div')
+  let heroBlock = document.createElement('div')
 
   heroBlock.id = hero.id
   heroBlock.className = "hero"
@@ -20,7 +20,7 @@ function createHeroBlock(hero) {
 
 function setupHeroReveal() {
   for (var i = 0; i < heroes.length; i++) {
-    var hero = heroes[i]
+    let hero = heroes[i]
 
     document.getElementById(hero.id).onmouseover = function () {
       revealSecretIdentity(hero.realName);
@@ -33,7 +33,7 @@ function setupHeroReveal() {
 }
 
 function setUpHeroBlocks() {
-  var allHeroes = document.getElementById('heroes')
+   var allHeroes = document.getElementById('heroes')
 
   heroes.forEach(function (hero) {
     var heroBlock = createHeroBlock(hero)
